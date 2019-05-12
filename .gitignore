@@ -1,8 +1,9 @@
 # dirs
 [Bb]uild*
 
-# settings
-*.pro.user
+# QtCreator
+#*.pro.user
+#*.pro.user.*
 
-# other
+# dolphin
 .directory
