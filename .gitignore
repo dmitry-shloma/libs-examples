@@ -2,8 +2,7 @@
 [Bb]uild*
 
 # QtCreator
-#*.pro.user
-#*.pro.user.*
+*.pro*user*
 
 # dolphin
 .directory
