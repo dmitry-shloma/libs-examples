@@ -1,0 +1,9 @@
+#pragma once
+
+#include <QtCore/qglobal.h>
+
+#if defined(SAMPLESHAREDLIB_LIBRARY)
+#  define SAMPLESHAREDLIBSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define SAMPLESHAREDLIBSHARED_EXPORT Q_DECL_IMPORT
+#endif

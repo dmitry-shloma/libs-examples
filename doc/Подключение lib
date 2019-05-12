@@ -1,0 +1,50 @@
+win32 {
+    # General
+    DEBUG_SFX = ""
+    CONFIG(debug,debug|release) {
+        DEBUG_SFX = d
+    }
+    #
+
+    # QtSerialPort lib
+    QTSERIALPORT_PATH = $$PWD/3rdParty/QtSerialPort
+    QTSERIALPORT_INC_PATH = $${QTSERIALPORT_PATH}/include
+    QTSERIALPORT_LIB_PATH = $${QTSERIALPORT_PATH}/lib
+
+    INCLUDEPATH += $${QTSERIALPORT_INC_PATH}
+    DEPENDPATH += $${QTSERIALPORT_INC_PATH}
+
+    QTSERIALPORT_LIB = QtSerialPort$${DEBUG_SFX}
+    LIBS += -L$${QTSERIALPORT_LIB_PATH} -l$${QTSERIALPORT_LIB}
+
+    PRE_TARGETDEPS += $${QTSERIALPORT_LIB_PATH}/$${QTSERIALPORT_LIB}.lib
+    #
+
+    # NovaTel lib
+    NOVATEL_PATH = $$PWD/3rdParty/NovaTel
+    NOVATEL_INC_PATH = $${NOVATEL_PATH}/include
+    NOVATEL_LIB_PATH = $${NOVATEL_PATH}/lib
+
+    INCLUDEPATH += $${NOVATEL_INC_PATH}
+    DEPENDPATH += $${NOVATEL_INC_PATH}
+
+    NOVATEL_LIB = NovaTel$${DEBUG_SFX}
+    LIBS += -L$${NOVATEL_LIB_PATH} -l$${NOVATEL_LIB}
+
+    PRE_TARGETDEPS += $${NOVATEL_LIB_PATH}/$${NOVATEL_LIB}.lib
+    #
+}
+
+
+# Qwt library
+#QWT_VER = 6.1.2
+#QWTLIBRARY_PATH = /usr/local/qwt
+
+# headers
+#INCLUDEPATH += $${QWTLIBRARY_PATH}-$${QWT_VER}/include
+#DEPENDPATH += $${QWTLIBRARY_PATH}-$${QWT_VER}/include
+#
+
+# lib
+#LIBS += -L$${QWTLIBRARY_PATH}-$${QWT_VER}/lib -lqwt
+#

@@ -1,5 +1,8 @@
-B[b]uild
+# dirs
+[Bb]uild*
 
+# settings
+*.pro.user
+
+# other
 .directory
-
-*.pro.user*
